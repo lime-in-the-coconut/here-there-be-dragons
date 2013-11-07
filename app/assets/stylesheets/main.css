@@ -1,0 +1,79 @@
+div {
+    border-radius:5px;
+}
+ol p {
+    font-size:12px;
+}
+img {
+    height:60px;
+    width:75px;
+    border-radius:5px;
+}
+a:hover {
+    font-weight:bold;
+    text-decoration:none;
+}
+a {
+    text-decoration:none;
+}
+body {
+    background-color:#d1e0e0;
+    border:2px solid #800000;
+    border-radius:5px;
+}
+div div {
+    display:inline-block;
+    font-size:26px;
+    border:2px solid #546464;
+    background-color:#b2cccc;
+    font-family:Impact;
+    margin-left:15px;
+    margin-top:8px;
+    color:#800000;
+    
+}
+    
+.right {
+    height:470px;
+    width:600px;
+    background-color:#d1d1d0;
+    float:right;
+    padding:10px;
+    margin-top:80px;
+    margin-right:20px;
+    border:2px solid #800000;
+    font-family:Impact;
+    color:#800000;
+}
+.left {
+    height:1350px;
+    width:650px;
+    background-color:#d2c2b3;
+    float:left;
+    margin-top:10px;
+    
+}
+.pic {
+    display:block;
+}
+#Boo {
+    height:60px;
+    width:75px;
+    border-radius:5px;
+}
+#Seb {
+    height:60px;
+    width:75px;
+    border-radius:5px;
+}
+#Mo {
+    height:60px;
+    width:75px;
+    border-radius:5px;
+}
+#Jig {
+    height:60px;
+    width:75px;
+    border-radius:5px;
+}
+

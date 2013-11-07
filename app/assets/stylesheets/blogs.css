@@ -1,0 +1,30 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+
+#header {
+    height:100px;
+    width:100%;
+    background-color:#ad855c;
+    position:fixed;
+    margin-left:auto;
+    margin-right:auto;
+    border:2px solid #800000;
+    z-index:1;
+}
+
+#footer {
+    height:30px;
+    width:1000px;
+    background-color:#ad855c;
+    font-size:20px;
+    text-align:center;
+    border:2px solid black;
+    color:#006666;
+    position: fixed;
+    margin-left:auto;
+    margin-right:auto;
+    bottom:10;
+}
