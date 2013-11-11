@@ -1,41 +1,67 @@
 
-<head>
-  <title>Kitties</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html> 
+	<head>
+	  <title>Kitties</title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body bgcolor= "E6E6FA">
+	<div class="Title"><em>EXPLORE LONDON</em>
+	</div>
 
-<div id="header">
-					<%= image_tag "Mo_kitten.jpg", :style =>"height:50px;width:37px;border-radius:5px;" %> <!--uses hash to pull pic; note that there is no assets/Mo_kitten.jpg"-->
-					<%= link_to blogs_path do %>
-					<div>BLOGS</div>
-					<% end %>
-					<%= link_to vision_path do %>
-					<div>VISION</div>
-					<% end %>
+	<div id="menubar">
+		<ul>
+			<li>
+				<%= link_to about_us_path do%>
+					HOME
+				<% end %>
+			</li>
+			<li>
+				<%= link_to blogs_path do %>
+					BLOGS
+				<% end %>
+			</li>
+			<li>
 					<%= link_to our_team_path do %>
-					<div>OUR TEAM</div>
-					<% end %>
-					<%= link_to contact_us_path do %>
-					<div>CONTACT US</div>
-					<% end %>
-	        <a href="http://www.catster.com/lifestyle/6-famous-authors-who-wrote-with-their-cats"><div>GOOD READS</div></a>
-	        <a href="http://joythebaker.com/2012/09/chewy-cat-treats-for-cats/"><div>RECIPES</div></a>
-	        <a href="http://thechive.com/category/funny_hilarious_photos_pictures/cat-saturday/"><div>PLANS FOR WORLD DOMINATION</div></a>
-	        <%= link_to terms_of_service_path do %>
-					<div>READ ME</div>
-					<% end %>
+					WHAT TO SEE
+				<% end %>
+			</li>
+			<li>
+				<%= link_to contact_us_path do %>
+					CONTACT US
+				<% end %>
+			</li>
+		  <li>
+		  	<a href="http://www.catster.com/lifestyle/6-famous-authors-who-wrote-with-their-cats">
+		  		GOOD READS
+		  	</a>
+		  </li>
+		  <li>
+		  	<a href="http://joythebaker.com/2012/09/chewy-cat-treats-for-cats/">
+		  		RECIPES
+		  	</a>
+		  </li>
+		  <li>
+		  	<%= link_to terms_of_service_path do %>
+				READ ME
+				<% end %>		
+		  </li>
+		  <li>
+		  	<a href="http://thechive.com/category/funny_hilarious_photos_pictures/cat-saturday/">
+		  		PLANS FOR WORLD DOMINATION
+		  	</a>
+			</li>
+		</ul>
+	</div>
 
-
-
-<%= yield %>
-
-<div id="footer">join us in celebrating:  <a href="http://felineyogi.com/yoga-tip-of-the-week/cat-world-domination-day/">cat world domination day</a></div>
-
-
-</body>
-
-
+	<div id="footer">
+		join us in celebrating:  
+		<a href="http://felineyogi.com/yoga-tip-of-the-week/cat-world-domination-day/">
+			cat world domination day
+		</a>
+	</div>
+	<%= yield %>
+	</body>
+</html>
 

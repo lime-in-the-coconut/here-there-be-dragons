@@ -1,35 +1,35 @@
-
-<div style="margin-top:30px">
-
+<html>
+<body>
   <% @tags.each do |tag| %>
-    <span style ="background-color:yellow;padding:2px;margin:4px">
+    <span style ="padding:2px;margin:4px">
     <%= link_to tag.tag, blogs_path(title: tag.tag) %>
     </span>
   <% end %>
+<div style="padding-left:20px">
+  <h1><u>What People Think</u></h1>
+  <div class="button">
+  <%= link_to 'Let Us Know What You Think!', new_blog_path %>
+  </div>
 </div>
-
-
-<h1>List of Blogs</h1>
-
-  
-    <% @blogs.each do |blog| %>
-     <div>
-        <h2><%= blog.title %></h2>
-        <div>
-          <% blog.tags.each do |tag| %>
-          <%= link_to tag.tag, blogs_path(title: tag.tag) %>
-          <% end %>
-        </div>
-        <div class="blog-title"><%= blog.content[0..10] %>...</div>
-          <%= time_ago_in_words(blog.created_at)%>
-        <div class="blog-control">
-        <%= link_to 'Show', blog %></div>
-        <%= link_to 'Edit', edit_blog_path(blog) %>
-        <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
-      </div>
-    <% end %>
-
-<br>
-
-<%= link_to 'New Blog', new_blog_path %>
+<div style="pading-left:20px;padding-bottom:50px">
+  <% @blogs.each do |blog| %>
+  <div>
+    <hr/>
+    <h2><u><%= blog.title %></u></h2>
+      <% blog.tags.each do |tag| %>
+        <%= link_to tag.tag, blogs_path(title: tag.tag) %>
+      <% end %>
+  </div>
+  <div class="blog-title">
+      <%= blog.content %>
+  </div>
+    <%= time_ago_in_words(blog.created_at)%>
+  <div class="blog-control">
+      <%= link_to 'Show', blog %>
+      <%= link_to 'Edit', edit_blog_path(blog) %>
+      <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
+</div>
+</body>
+</html>

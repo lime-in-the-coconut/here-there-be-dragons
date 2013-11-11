@@ -1,24 +1,29 @@
-<h1>Editing blog</h1>
+<html>
+<h1 style="padding:5px">Edit the Blog</h1>
 
 <%= render 'form' %>
-
+<div style="padding:10px">
 <%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %> <br/>
+<%= link_to 'Back', blogs_path %> 
+</div>
+<hr/>
 
 <div>
-<h3>Add a tag</h3>
+<h3 style="padding:5px">Add a tag</h3>
 <%= render 'tags/form' %>
 </div>
 <hr/>
 
-<<div style= "margin-top:30px">
+<h3 style="padding:5px">Existing Tags</h3>
+
+<<div style= "margin-top:30px;font-size:20px">
 <% @blog.tags.each do |tag| %>
 
-<span style ="background-color:gray;padding:2px;margin:4px"><%= tag.tag %></span>
+<span style ="background-color:gray;padding:2px;margin:4px;border-radius:5px;color:white"><%= tag.tag %></span>
 <%= link_to 'x', tag, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 </div>
-
+</html>
 
 
 
